@@ -30,9 +30,39 @@ class CoffeeMachine extends CoffeeEquipment {
 
     }
 
-    public void addWater(int water) { this.water = water + getWater();}
-    public void addMilk(int milk) { this.milk = milk + getMilk();}
-    public void addCofee(int cofee) {this.cofee = cofee + getCofee(); }
+    public void addWater(int water) {
+        int x = this.water+water;
+        int y = getMaxWater()-this.water;
+        if(x >= getMaxWater()) {
+            this.water = y +  this.water;
+            System.out.println(x-getMaxWater() + " "+"это не помещается в бак");
+        }
+        else {
+            this.water = this.water + water;
+        }
+    }
+    public void addMilk(int milk) {
+        int x = this.milk+milk;
+        int y = getMaxMilk()-this.milk;
+        if (x >= getMaxMilk()) {
+            this.milk = y +  this.milk;
+            System.out.println(x-getMaxMilk() + " "+"это не помещается в бак");
+        }
+        else {
+            this.milk = this.milk + milk;
+        }
+    }
+    public void addCofee(int cofee) {
+        int x = this.cofee+cofee;
+        int y = getMaxCofee()-this.cofee;
+        if (x >= getMaxCofee()) {
+            this.cofee = y +  this.cofee;
+            System.out.println(x-getMaxCofee() + " "+"это не помещается в бак");
+        }
+        else {
+            this.cofee = this.cofee + cofee;
+        }
+    }
     public int getMaxWater() {
         return maxWater;
     }
