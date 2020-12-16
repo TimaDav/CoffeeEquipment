@@ -7,14 +7,12 @@ public class Main {
             boschCoffeeMachine.addWater(2000);
             boschCoffeeMachine.addMilk(500);
             boschCoffeeMachine.addCofee(150);
-                
-                
+
+
             System.out.println(boschCoffeeMachine.getWater());
             System.out.println(boschCoffeeMachine.getMilk());
             System.out.println(boschCoffeeMachine.getCofee());
 
-        }
-
-
     }
+}
 
